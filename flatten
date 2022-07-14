@@ -1,0 +1,11 @@
+l = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+L = []
+def f(x):
+    for i in x:
+        if isinstance(i, list):
+            f(i)
+        else:
+            L.append(i)
+
+f(l)
+print(L)
